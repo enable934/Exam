@@ -13,6 +13,6 @@ namespace Exam.Model
         public DateTimeOffset ExpiredDate { get; set; }
         public DateTimeOffset CreationDate { get; set; }
         public int ToxicDegree { get; set; }
-        public int Storage { get; set; }
+        public int StorageId { get; set; }
     }
 }

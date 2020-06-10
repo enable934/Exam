@@ -10,10 +10,13 @@ namespace Exam.Service
     {
         private UnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public ProductService(UnitOfWork unitOfWork, IMapper mapper)
+        private readonly StorageService _storageService;
+
+        public ProductService(UnitOfWork unitOfWork, IMapper mapper, StorageService storageService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _storageService = storageService;
         }
         public IEnumerable<ProductModel> GetProducts()
         {
